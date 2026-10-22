@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thư viện lớp học</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand-title">Thư viện lớp học</h1>
+      <div class="header-controls">
+        <button id="theme-toggle" class="btn btn-outline" type="button">Giao diện tối</button>
+        <div class="fav-counter">
+          <span>Yêu thích:</span>
+          <strong id="fav-count">0</strong>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main-layout">
+    <section class="toolbar">
+      <div class="toolbar-group">
+        <label for="search-input">Tìm kiếm</label>
+        <input type="search" id="search-input" placeholder="Nhập tên sách...">
+      </div>
+      <div class="toolbar-group">
+        <label for="genre-select">Thể loại</label>
+        <select id="genre-select">
+          <option value="ALL">Tất cả</option>
+        </select>
+      </div>
+    </section>
+
+    <div class="status-bar">
+      <p id="status-text">Đang tải…</p>
+    </div>
+
+    <section>
+      <div id="book-grid" class="book-grid"></div>
+    </section>
+
+    <section class="form-card">
+      <h2>Thêm sách mới</h2>
+      <form id="add-book-form" novalidate>
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="title-input">Tên sách</label>
+            <input type="text" id="title-input" name="title">
+            <small class="error-text" id="title-error"></small>
+          </div>
+          <div class="form-field">
+            <label for="author-input">Tác giả</label>
+            <input type="text" id="author-input" name="author">
+            <small class="error-text" id="author-error"></small>
+          </div>
+          <div class="form-field">
+            <label for="genre-input">Thể loại</label>
+            <select id="genre-input" name="genre">
+              <option value="">-- Chọn thể loại --</option>
+              <option value="Công nghệ">Công nghệ</option>
+              <option value="Khoa học">Khoa học</option>
+              <option value="Văn học">Văn học</option>
+              <option value="Kinh tế">Kinh tế</option>
+            </select>
+            <small class="error-text" id="genre-error"></small>
+          </div>
+          <div class="form-field">
+            <label for="year-input">Năm xuất bản</label>
+            <input type="number" id="year-input" name="publishedYear">
+            <small class="error-text" id="year-error"></small>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="submit" id="submit-btn" class="btn btn-primary">Thêm sách</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Thư viện lớp học - Bài thực hành 02</p>
+    </div>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
